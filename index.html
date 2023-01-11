@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <link rel="stylesheet" href="style.css" />
+  <head>
+    <title>Change Button Text using JQuery</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+  </head>
+  <body>
+    <button class="button" id="button" style="display: none">Change To Red</button>
+    <p class="change-text" id="cText" style="color: red">ea ea ea ea</p>
+
+    <button class="button1" id="button1">Change To Blue</button>
+    <script>
+      $(document).ready(function () {
+        $("#button").click(function () {
+          $("#cText").css("color", "red");
+          $("#button").css("display", "none");
+          $("#button1").css("display", "block");
+        });
+        $("#button1").click(function () {
+          $("#cText").css("color", "blue");
+          $("#button").css("display", "block");
+          $("#button1").css("display", "none");
+        });
+      });
+    </script>
+  </body>
+</html>
